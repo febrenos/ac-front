@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition:.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+svg{
+  fill: var(--text-secundary-color);
+  width:22px;
+  height:auto;
+}
+
+:root{
+  --primary-color: #42AEEB;
+  --bg-color:#FFFFFF;
+  --bg-secundary-color: #f1f1f1;
+  --text-color: #8b8b8b;
+  --text-secundary-color: #B9B9B9;/*text, border inputs*/
+  --text-button: #FFFFFF;
+  --text-logged-color: rgba(47, 51, 79, 0.55);
+  --button-color: #42AEEB;
+  --bg-theme-color: linear-gradient(180deg, rgba(67, 72, 226, 0.62) 0%, rgba(19, 159, 210, 0.72) 100%);
+  --box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.25);
+}
