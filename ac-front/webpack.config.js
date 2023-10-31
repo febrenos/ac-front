@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production', // Altere para 'production' para produção
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -25,7 +25,15 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        use: ['url-loader'],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192, // Ajuste o limite conforme necessário
+              name: 'images/[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
