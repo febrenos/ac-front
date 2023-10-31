@@ -10,6 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/access" element={<Access />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Access />} />
       </Routes>
     </Router>
   );
