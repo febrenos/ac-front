@@ -19,7 +19,7 @@ export default function AccessCard() {
                 <Styles.ContentButtonCard>
                     <Styles.UnderButtonCard/>
                     <Styles.ButtonCardLogin isRegister={!isRegister} onClick={loginOn}>Login</Styles.ButtonCardLogin>
-                    <Styles.ButtonCardRegister isRegister={isRegister} onClick={loginOff}>Register</Styles.ButtonCardRegister>
+                    <Styles.ButtonCardRegister isRegister={isRegister} onClick={loginOff}>Cadastro</Styles.ButtonCardRegister>
                 </Styles.ContentButtonCard>
                 <Styles.Content>
                     <Styles.UserIcon/>
@@ -35,8 +35,8 @@ export default function AccessCard() {
                             <Input name="user" type="text" placeholder="Login"/>
                             <Input name="email" type="email" placeholder="Email"/>
                             <Input name="password" type="password" placeholder="Password"/>
-                            <Input name="password" type="password" placeholder="Password"/>
-                            <Button name="Register" isRegister={isRegister}/>
+                            <Input name="password" type="password" placeholder="Conf. Password"/>
+                            <Button name="Cadastrar" isRegister={isRegister}/>
                         </>
                     }
                     

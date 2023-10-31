@@ -8,13 +8,14 @@ export const Input = styled.input`
 background-color: var(--bg-secondary-color);
 border:2px solid var(--bg-secondary-color);
 padding: 7px 40px;
-text-align:center;
 color: var(--text-color);
 border-radius:10px;
 font-size:15px;
+text-align:center;
 
 &::placeholder{
     color:var(--text-color);
+    opacity:.6;
 }
 
 &:focus{
