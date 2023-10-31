@@ -5,8 +5,8 @@ import {ReactComponent as Lock} from '../../../src/assets/icons/lock.svg'
 import {ReactComponent as LockOpen} from '../../../src/assets/icons/lockOpen.svg'
 
 export const Input = styled.input`
-background-color: var(--bg-secundary-color);
-border:2px solid var(--bg-secundary-color);
+background-color: var(--bg-secondary-color);
+border:2px solid var(--bg-secondary-color);
 padding: 7px 40px;
 text-align:center;
 color: var(--text-color);

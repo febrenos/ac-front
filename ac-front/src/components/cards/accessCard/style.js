@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import {ReactComponent as User} from '../../../assets/icons/user.svg'
 
 export const Card = styled.div`
-    width:320px;
+    user-select:none;
+    width:330px;
     height:auto;
     background-color: var(--bg-color);
     border-radius:20px;
@@ -27,37 +28,31 @@ export const ContentButtonCard = styled.div`
     height:50px;
     width 100%
 `
-export const ButtonCardLogin = styled.button`
-    padding: 5% 5%;
-    color: var(--text-secundary-color);
-    width: 100%;
-    background: ${props => props.isRegister ? 'var(--bg-color)' : 'var(--bg-secundary-color)'};
-    text-align:center;
-    border-radius: ${props => props.isRegister ? '10px 10px 10px 0' : '10px 10px 10px 0'};
-    border:none;
-    cursor:pointer;
-    z-index:9999;
-    font-size: 17px;
-    font-weight: 500;
+export const BaseButtonCard = styled.button`
+background: ${props => props.isRegister ? 'var(--bg-color)' : 'var(--bg-secondary-color)'};
+padding: 5% 5%;
+color: var(--text-secundary-color);
+width: 100%;
+border:none;
+cursor:pointer;
+z-index:9999;
+font-size: 17px;
+font-weight: 500;
+text-align:center;
 `
-export const ButtonCardRegister = styled.button`
-    padding: 5% 5%;
-    color: var(--text-secundary-color);
-    width: 100%;
-    background: ${props => props.isRegister ? 'var(--bg-color)' : 'var(--bg-secundary-color)'};
-    text-align:center;
+
+export const ButtonCardLogin = styled(BaseButtonCard)`
+    border-radius: ${props => props.isRegister ? '10px 10px 10px 0' : '10px 10px 10px 0'};
+`
+
+export const ButtonCardRegister = styled(BaseButtonCard)`
     border-radius: ${props => props.isRegister ? '10px 10px 0 10px' : '10px 10px 0 10px'};
-    border:none;
-    cursor:pointer;
-    z-index:9999;
-    font-size: 17px;
-    font-weight: 500;
 `
 
 export const UnderButtonCard = styled.div`
     border-radius:25px 25px 0 0;
     height: 100%;
-    background-image: linear-gradient(to bottom, var(--bg-secundary-color) 50%, var(--bg-color) 50%);
+    background-image: linear-gradient(to bottom, var(--bg-secondary-color) 50%, var(--bg-color) 50%);
     width: 100%;
     position: absolute;
     flex-grow:1;
@@ -68,7 +63,7 @@ export const UnderButtonCard = styled.div`
 export const UserIcon = styled(User)`
     width:90px;
     height:auto;
-    background: var(--bg-secundary-color);
+    background: var(--bg-secondary-color);
     border-radius:100%;
 `
 // export { CardStyled as Card, ButtonStyled as Button };
