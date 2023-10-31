@@ -4,10 +4,10 @@ import App from './App';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ReactDOM.render(
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 reportWebVitals();
