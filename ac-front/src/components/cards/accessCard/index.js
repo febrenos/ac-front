@@ -1,18 +1,28 @@
 import React, {useState} from 'react'
+import {Button, Input} from '../../index'
+import {useNavigate } from 'react-router-dom';
 import * as Styles from './style'
-import Button from '../../buttons/button'
-import Input from '../../inputs'
 
-// import {Card, ButtonCard} from './style'
+function test() {
+  return () => {
+    setTimeout(() => {
+      console.log("Test loading");
+    }, 3000);
+  };
+}
 
-export default function AccessCard() {
+export function AccessCard() {
     const [isRegister,setIsRegister] = useState(false)
+    const navigate = useNavigate()
     const loginOn = () => {
         setIsRegister(false);
     };
     const loginOff = () => {
         setIsRegister(true);
     };
+    const login = () =>{
+        navigate('/about-us')
+    }
 
     return(
             <Styles.Card>
@@ -27,7 +37,7 @@ export default function AccessCard() {
                         <>
                             <Input name="user" type="text" placeholder="Login"/>
                             <Input name="password" type="password" placeholder="Password"/>
-                            <Button name="Login" isRegister={isRegister}/>
+                            <Button text="Login" onClick={login}/>
                         </>
                     }
                     {isRegister &&
@@ -36,7 +46,7 @@ export default function AccessCard() {
                             <Input name="email" type="email" placeholder="Email"/>
                             <Input name="password" type="password" placeholder="Password"/>
                             <Input name="password" type="password" placeholder="Conf. Password"/>
-                            <Button name="Cadastrar" isRegister={isRegister}/>
+                            <Button text="Cadastrar" onClick={test()} />
                         </>
                     }
                     

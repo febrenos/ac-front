@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {ReactComponent as User} from '../../../assets/icons/user.svg'
+import { User } from '../../../assets/icons/index'
 
 export const Card = styled.div`
     user-select:none;

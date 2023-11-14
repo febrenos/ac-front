@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as Styles from './style'
 // import {Card, ButtonCard} from './style'
 
-export default function Input({type, name, placeholder}) {
+export function Input({type, name, placeholder}) {
     const [isShowPassword, setIsShowPassword] = useState(false);
     const handlesetIsShowPassword= () => {
         setIsShowPassword(!isShowPassword)

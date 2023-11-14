@@ -1,21 +1,17 @@
 import styled from 'styled-components'
-import {ReactComponent as User} from '../../../src/assets/icons/user.svg'
-import {ReactComponent as Email} from '../../../src/assets/icons/email.svg'
-import {ReactComponent as Lock} from '../../../src/assets/icons/lock.svg'
-import {ReactComponent as LockOpen} from '../../../src/assets/icons/lockOpen.svg'
+import {User, Email, Lock, LockOpen} from '../../../assets/icons/index'
 
 export const Input = styled.input`
 background-color: var(--bg-secondary-color);
 border:2px solid var(--bg-secondary-color);
 padding: 7px 40px;
-color: var(--text-color);
+color: var(--text-solid);
 border-radius:10px;
 font-size:15px;
 text-align:center;
 
 &::placeholder{
     color:var(--text-color);
-    opacity:.6;
 }
 
 &:focus{

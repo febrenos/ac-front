@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import BgLogoCut from '../../assets/img/cutOutLogo.png'
-import BgLogo from '../../assets/img/whiteLogo.png'
+import {CutOutLogo, InlineLogo} from '../../assets/imgs'
 
 export const PageContent  = styled.div`
     display:flex;
-    height:100%;
+    height:100vh;
     @media(width < 768px){
         flex-direction:column;
     }
@@ -12,8 +11,8 @@ export const PageContent  = styled.div`
 
 export const Left  = styled.div`
     display:flex;
-    width:40%;
-    height:100%;
+    width:40vw;
+    height:100vh;
     justify-content:flex-end;
     align-items:center;
     background: var(--bg-theme-color);
@@ -27,21 +26,41 @@ export const Left  = styled.div`
 export const Right = styled.div`
     flex:1;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    padding:8px;
+    flex-direction:column;
     height:100%;
     background: var(--bg-color);
 `
+
+export const Center = styled.div`
+    flex:1;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+`
+
 export const BgImage = styled.div`
-    background-image: url(${BgLogoCut});
+    width:100%;
+    height:100%;
+    background-image: url(${CutOutLogo});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 60%;
-    opacity: .2;
-    @media(width < 768px){
-        background-image: url(${BgLogo});
+    background-size: 50vh;
+    opacity: 0.2;
+
+    @media (max-width: 768px) {
+        background-image: url(${InlineLogo});
         background-position: center;
         background-size: contain;
+
     }
 `;
+
+export const ImgLogoInline = styled.img`
+width:150px;
+height:45px;
+@media (width < 768px) {
+    display: none;
+}
+`
