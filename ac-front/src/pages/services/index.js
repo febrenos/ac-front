@@ -11,7 +11,7 @@ export function Services() {
                     <Text text="Pesquisa e Desenvolvimento" title/>
                     <Img src={SPesquisaDesenvolvimento} width={500}/>
 
-                    <Text text="Serviços" title/>
+                    <Text text="importações" title/>
                     <Text text="Fornecemos a melhor solução para entrega de mercadorias no desembaraço aduaneiro no Brasil do fornecedor internacional para sua empresa ou fornecer diretamente de nossos parceiros de distribuição"/>
                     <Img src={SImportacaoDireta} width={700}/>
                     <Img src={SImportacaoTrading} width={700}/>
